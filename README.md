@@ -35,8 +35,8 @@ When the user calls `unlock`, `add_entry` and `get_entries` should work as desir
 When the user calls `lock` again they throw errors again.
 ```
 
-**First** organise it into one class only.
-Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary.rb)
+**First** organise it into one class only.  
+- [x] Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary.rb)
 
-**Then**, when all your tests are green, reorganise it into classes with high cohesion.
-Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary_encap.rb)
+**Then**, when all your tests are green, reorganise it into classes with high cohesion.  
+- [x] Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary_encap.rb)
