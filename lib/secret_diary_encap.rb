@@ -1,36 +1,59 @@
+require 'date'
 class SecretDiary
-    attr_reader :security
-    def initialize
-        @security = Security.new
+
+    def initialize(security_class = Security)
+        @security = security_class.new
+        @entries = []
     end
    
     def add_entry
         raise 'Cannot add entry: Diary locked' if locked?
         puts "Please add your entry"
+        entry = gets.chomp
+        @entries << {date: Date.today, text: entry}
     end
 
     def locked?
-        @security == 'locked'
+        @security.locked?
+    end
+
+    def unlocked?
+        !@security.locked?
+    end
+
+    def unlock
+        @security.unlock
+    end
+
+    def lock
+        @security.lock
+    end
+
+    def get_entries
+        raise 'Cannot get entries: Diary locked' if locked?
+        puts 'Here are the entries'
+        @entries
     end
 end
 
 class Security
-    attr_reader :security
+    
     def initialize
-        @security = 'locked'
+        @locked = true
     end
+
+    def locked?
+        @locked
+    end
+
     def unlock
-        @security = 'unlocked'
+        @locked = false
     end
+
     def lock
-        @security = 'locked'
+        @locked = true
     end
 end
 
-class DiaryEntries
-    def get_entries
-        raise 'Cannot get entries: Diary locked' if locked?
-        puts 'Here are the entries'
-    end
-end
+
 
