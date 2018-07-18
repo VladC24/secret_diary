@@ -19,7 +19,7 @@ A class has high cohesion when everything inside of it relates to that purpose, 
 ### Secret Diary Challenge
 
 **Test-drive** the secret diary example:
-Uses TDD and teh red-green-refactor process.
+Uses TDD and the red-green-refactor process.
 
 ```
 SecretDiary
@@ -36,7 +36,7 @@ When the user calls `lock` again they throw errors again.
 ```
 
 **First** organise it into one class only.  
-- [x] Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary.rb)
+- [x] Solution [here](https://github.com/Whatapalaver/secret_diary/tree/master/one_class/lib)
 
 **Then**, when all your tests are green, reorganise it into classes with high cohesion.  
 - [x] Solution [here](https://github.com/Whatapalaver/secret_diary/blob/master/lib/secret_diary_encap.rb)
